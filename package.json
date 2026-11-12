@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "author": "Compromisee (fork of 0PandaDEV/Qopy)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tauri build",
+    "dev": "tauri dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.5.0",
+    "@tauri-apps/cli": "2.5.0",
+    "@tauri-apps/plugin-autostart": "2.4.0",
+    "@tauri-apps/plugin-os": "2.2.2",
+    "@waradu/keyboard": "4.3.0",
+    "highlight.js": "^11.12.0",
+    "nuxt": "3.17.5",
+    "overlayscrollbars": "2.11.4",
+    "overlayscrollbars-vue": "0.5.9",
+    "sass-embedded": "1.89.2",
+    "uuid": "11.1.0",
+    "vue": "3.5.17"
+  },
+  "overrides": {
+    "chokidar": "^3.6.0"
+  }
+}

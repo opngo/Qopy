@@ -1,0 +1,283 @@
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+
+.back {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  img {
+    background-color: var(--border);
+    border-radius: 6px;
+    padding: 8px 6px;
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+}
+
+p {
+  font-family: SFRoundedMedium;
+}
+
+.settings-container {
+  width: 100%;
+  height: 100%;
+  margin-top: 14px;
+  position: relative;
+  font-size: 12px;
+  font-family: SFRoundedMedium;
+
+  .settings {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .section-title {
+        font-family: SFRoundedSemiBold;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        padding-left: 4px;
+      }
+
+      .row {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+
+        .names {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+
+          p {
+            font-family: SFRoundedSemiBold;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: right;
+            height: 16px;
+            align-items: center;
+          }
+        }
+
+        .actions {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          color: var(--text-muted);
+
+          // High-specificity override so the swatches lay out in a ROW,
+          // not a column (the column rule above used to win and pushed the
+          // page out of the 474px window).
+          &.theme-actions {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 340px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.launch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 16px;
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--text-muted);
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:checked {
+      ~ .checkmark {
+        opacity: 1;
+      }
+    }
+  }
+
+  .checkmark {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+}
+
+.keybind-input {
+  width: min-content;
+  white-space: nowrap;
+  padding: 6px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  outline: none;
+  gap: 4px;
+
+  .key {
+    color: var(--text-secondary);
+    font-family: SFRoundedMedium;
+    background-color: var(--border);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+}
+
+.keybind-input:focus {
+  border: 1px solid var(--accent);
+}
+
+.empty-keybind {
+  border-color: rgba(255, 82, 82, 0.5);
+}
+
+.theme-actions {
+  .theme-swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+
+    .swatch-bg {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      border: 2px solid transparent;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 6px;
+      transition: border-color 0.15s, transform 0.15s;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18);
+
+      .swatch-accent {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+      }
+    }
+
+    .swatch-name {
+      font-size: 10px;
+      color: var(--text-secondary);
+      font-family: SFRoundedMedium;
+    }
+
+    &:hover .swatch-bg {
+      transform: translateY(-2px);
+    }
+
+    &.active .swatch-bg {
+      border-color: var(--accent);
+    }
+
+    &.active .swatch-name {
+      color: var(--accent);
+    }
+  }
+}
+
+.danger-btn {
+  font-family: SFRoundedMedium;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background-color: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  height: 32px;
+
+  &:hover {
+    color: var(--text);
+    border-color: rgba(255, 82, 82, 0.4);
+    background-color: rgba(255, 82, 82, 0.06);
+  }
+
+  &.arming {
+    color: #ff5252;
+    border-color: #ff5252;
+    background-color: rgba(255, 82, 82, 0.12);
+  }
+}
+
+.history-count {
+  font-family: SFRoundedMedium;
+  font-size: 12px;
+  color: var(--text-secondary);
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.limit-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  input[type="range"] {
+    width: 130px;
+    accent-color: var(--accent);
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .limit-value {
+    font-family: SFRoundedMedium;
+    font-size: 12px;
+    color: var(--text-secondary);
+    min-width: 64px;
+  }
+}
+
+.top-bar {
+  width: 100%;
+  min-height: 56px;
+  border-bottom: 1px solid var(--border);
+}
