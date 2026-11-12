@@ -4,68 +4,24 @@
 <h1 align="center"><b>Qopy</b></h1>
 
 <p align="center">
-  <b>Forked by <a href="https://github.com/Compromisee">Compromisee</a></b>
+  <b>Forked by <a href="https://github.com/opngo">Opngo</a></b>
   ·
   from <a href="https://github.com/0pandadev/qopy">PandaDev/Qopy</a>
 </p>
 
 The fixed and simple clipboard manager for both Windows and Linux.
 
-<a href="https://github.com/0PandaDEV/Qopy/releases/download/v0.3.3/Qopy-0.3.3_x64.msi">
-  <img src="./public/windows.png"> Windows (x64)
-</a>
-•
-<a href="https://github.com/0PandaDEV/Qopy/releases/download/v0.3.3/Qopy-0.3.3_arm64.msi">
-  Windows (arm64)
-</a>
-<br>
-<a href="https://github.com/0PandaDEV/Qopy/releases/download/v0.3.3/Qopy-0.3.3.deb">
-  <img src="./public/linux.png"> Linux (deb)
-</a>
-•
-<a href="https://github.com/0PandaDEV/Qopy/releases/download/v0.3.3/Qopy-0.3.3.rpm">
-  Linux (rpm)
-</a>
-•
-<a href="https://github.com/0PandaDEV/Qopy/releases/download/v0.3.3/Qopy-0.3.3.AppImage">
-  Linux (AppImage)
-</a>
-<br>
-<a href="https://github.com/0PandaDEV/Qopy/releases/download/v0.3.3/Qopy-0.3.3_silicon.dmg">
-  <img src="./public/apple.png"> macOS (Silicon)
-</a>
-•
-<a href="https://github.com/0PandaDEV/Qopy/releases/download/v0.3.3/Qopy-0.3.3_intel.dmg">
-  macOS (Intel)
-</a>
-<br>
-<br>
-<sup>Nightly releases can be found <a href="https://github.com/0PandaDEV/qopy/actions/workflows/build.yml">here</a> </sup>
 
-</div>
-
-[discord »](https://discord.gg/invite/PEX37vvWyU)
 
 > \[!IMPORTANT]
 >
 > **Star this project**, You will receive all release notifications from GitHub without any delay \~ ⭐️
 
-<details>
-  <summary><kbd>Star History</kbd></summary>
-  <a href="https://starchart.cc/0PandaDEV/Qopy">
-    <picture>
-      <img width="100%" src="https://starchart.cc/0PandaDEV/Qopy.svg?variant=adaptive">
-    </picture>
-  </a>
-</details>
-
-![ziit](https://ziit.app/api/public/badge/cm98il90n0000o52c3my0bf5p/qopy)
-
 ## 📋 What is Qopy
 
 Qopy is a fixed clipboard manager designed as a simple alternative to the standard clipboard on Windows. It aims to provide a faster, more reliable experience while providing an extensive set of features compared to its Windows counterpart.
 
-This branch is maintained by **Compromisee** as a fork of **PandaDev/Qopy**, and includes the reliability fixes and extra features listed below.
+This branch is maintained by **Opngo** as a fork of **PandaDev/Qopy**, and includes the reliability fixes and extra features listed below.
 
 ## ✨ Features
 
@@ -115,8 +71,6 @@ Here you can see a few concepts these might not be implemented:
 
 Qopy is open-source and free to use. I appreciate donations to support ongoing development and improvements. Your contributions are voluntary and help me enhance the app for everyone.
 
-<a href="https://buymeacoffee.com/pandadev_"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black"/></a>
-
 ## ⌨️ Local development
 
 You can use GitHub Codespaces for online development:
@@ -134,7 +88,7 @@ bun dev
 
 > \[!TIP]
 >
-> If you are interested in contributing code, feel free to check out the [Issues](https://github.com/0pandadev/Qopy/issues) section.
+> If you are interested in contributing code, feel free to check out the [Issues](https://github.com/opngo/Qopy/issues) section.
 
 ## 🔨 Building for production
 
